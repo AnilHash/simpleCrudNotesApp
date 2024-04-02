@@ -1,0 +1,12 @@
+service: simpleCrudNotesApp
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+
+functions: ${file(./lambdas/functions.yml)}
+resources: ${file(./resources/resources.yml)}
+
+plugins:
+  - serverless-plugin-typescript

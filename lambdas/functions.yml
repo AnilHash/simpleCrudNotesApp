@@ -1,0 +1,28 @@
+createNote:
+  handler: lambdas/createNote.handler
+  events:
+    - http:
+        path: /notes
+        method: post
+        cors: true
+updateNote:
+  handler: lambdas/updateNote.handler
+  events:
+    - http:
+        path: /notes/{id}
+        method: put
+        cors: true
+deleteNote:
+  handler: lambdas/deleteNote.handler
+  events:
+    - http:
+        path: /notes/{id}
+        method: delete
+        cors: true
+getAllNotes:
+  handler: lambdas/getAllNotes.handler
+  events:
+    - http:
+        path: /notes
+        method: get
+        cors: true
